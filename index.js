@@ -1,6 +1,6 @@
 //getting canvas for HTML
-const canvas = document.
-	querySelector('canvas')
+const canvas = document.querySelector('canvas')
+//getContext not working for some reason
   const c = canvas.getContext('2d')
   
   canvas.width = innerWidth
