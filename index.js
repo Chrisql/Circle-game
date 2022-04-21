@@ -1,6 +1,5 @@
 //getting canvas for HTML
 const canvas = document.querySelector('canvas')
-//getContext not working for some reason
   const c = canvas.getContext('2d')
   
   canvas.width = innerWidth
@@ -75,7 +74,7 @@ const canvas = document.querySelector('canvas')
   const player = new Player(x, y, 30, 'blue')
   
  function spawnEnemies(){
- 	setInterva(() => {
+ 	setInterval(() => {
   console.log('go');
   }, 1000) 
  } 
@@ -86,7 +85,7 @@ const canvas = document.querySelector('canvas')
       y: 1
     }
     )
-   
+   //need to set the projectiles so that it can work
  const projectiles = []
  const enemies = []
  
@@ -98,7 +97,7 @@ const canvas = document.querySelector('canvas')
     projecitle.update()
     })
   }
-  //something wrong here
+ 
   window.addEventListener('click', (event) => {
   const angle = Math.atan2(event.client - canvas.height / 2,
 event.clientX - canvas.width / 2)
@@ -107,7 +106,7 @@ event.clientX - canvas.width / 2)
   y: Math.sin(angle)
   }
 console.log(angle)
-	projectiles.push(new Projectile(canvas.width / 2, cnavas.height / 2, 5, 'red', velocity)
+	projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'red', velocity)
   )
 })
   
